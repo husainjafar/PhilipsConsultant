@@ -1,0 +1,49 @@
+.hero_bg {
+    background-image: url(hero.jpg);
+    height:460px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.herotext {
+    padding:50px;
+}
+.lead {
+    display: flex;
+
+    align-items:flex-start;
+    padding-right: 0px;
+    padding-bottom: 30px;
+}
+
+.form_body {
+    background-color:#fdd37a;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.Left_text {
+    padding-top:40px;
+    padding-right: 0px;
+    padding-left: 0px;
+
+}
+
+.left_head {
+    padding-bottom:20px;
+    color:#002c77;
+    font-weight:bold;    
+}
+.center-text {
+    display: flex;
+    color:#002c77";
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+    
+
+
