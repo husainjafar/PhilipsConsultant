@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', async function() {
+document.addEventListener('DOMContentLoaded', async function () {
     async function loadClient() {
         return new Promise((resolve, reject) => {
             gapi.load('client', resolve);
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     function attachFormListener() {
         const form = document.querySelector('form');
         if (form) {
-            form.addEventListener('submit', function(e) {
+            form.addEventListener('submit', function (e) {
                 e.preventDefault();
                 writeData();
             });
@@ -41,23 +41,21 @@ document.addEventListener('DOMContentLoaded', async function() {
                     document.querySelector('input[name="flexCheckChecked"]').checked ? 'Yes' : 'No'
                 ]
             ];
-            
+
             const response = await gapi.client.sheets.spreadsheets.values.append({
                 'spreadsheetId': '1EJRkYBLShn6nPwk1G2yekgNnTFjblMWwxuz7AYaYtzU',
                 'range': 'Sheet1!A1',
                 'valueInputOption': 'RAW',
                 'values': data,
             });
-            
+
             alert('Data written to Google Sheet');
         } catch (error) {
             console.error("Error writing data:", error);
         }
     }
-    
-    loadClient().then(init).catch(error => console.error("Error loading client:", error));
-});
 
+    loadClient().then(init).catch(error => console.error("Error loading client:", error));
 
     gapi.load('client', init);
 });
